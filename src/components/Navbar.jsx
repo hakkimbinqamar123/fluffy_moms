@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import logo from "../assets/icon.png";
 
 const Navbar = () => {
   return (
@@ -7,7 +8,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         <Link to="/" className="flex items-center space-x-2">
           <div className="w-10 h-10 bg-[#F4C430] rounded-full flex items-center justify-center">
-            <span className="text-2xl">🐾</span>
+            <img src={logo} className='rounded-full' alt="" />
           </div>
           <span className="text-xl font-bold text-[#2C5234]">Fluffy Moms</span>
         </Link>

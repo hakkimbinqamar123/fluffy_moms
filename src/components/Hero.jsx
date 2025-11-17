@@ -108,7 +108,7 @@ const Hero = () => {
           </div>
 
           {/* DOG PORTRAIT */}
-          <div className="absolute bottom-10 right-8 md:right-14 z-30">
+          <div className="absolute bottom-10 right-8 md:right-14 z-30 hidden">
             <div className="w-36 h-48 md:w-48 md:h-64 rotate-[6deg]">
               <img
                 src={dogPortrait}

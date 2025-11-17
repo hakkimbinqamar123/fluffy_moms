@@ -3,6 +3,8 @@ import mainCat from "../assets/images/hero/main-cat.png";
 import peopleWithPets from "../assets/images/hero/people-with-pets.png";
 import petsOutdoors from "../assets/images/hero/pets-outdoors.png";
 import dogPortrait from "../assets/images/hero/dog-portrait.png";
+import footprint from "../assets/foot.png";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -12,16 +14,7 @@ const Hero = () => {
         {/* LEFT SIDE */}
         <div className="bg-[#F5EFE0] relative px-10 md:px-16 lg:px-20 py-20 lg:py-28 min-h-[650px] flex items-center">
 
-          {/* Large Paw Print */}
-          <div className="absolute top-10 left-10 opacity-20">
-            <svg width="95" height="95" viewBox="0 0 90 90" fill="none">
-              <ellipse cx="45" cy="56" rx="16" ry="20" fill="#D4C5A9" />
-              <ellipse cx="32" cy="32" rx="9" ry="11" fill="#D4C5A9" />
-              <ellipse cx="58" cy="32" rx="9" ry="11" fill="#D4C5A9" />
-              <ellipse cx="20" cy="43" rx="7" ry="9" fill="#D4C5A9" />
-              <ellipse cx="70" cy="43" rx="7" ry="9" fill="#D4C5A9" />
-            </svg>
-          </div>
+          
 
           {/* Small Paw */}
           <div className="absolute bottom-36 right-14 opacity-20">
@@ -36,6 +29,14 @@ const Hero = () => {
 
           {/* TEXT COPY */}
           <div className="relative z-10 max-w-xl">
+            <img
+              src={footprint}
+              className="mb-7"
+              style={{
+                height: "200px", width: "200px",
+              }}
+              alt="Footprint Image"
+            />
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-black leading-[1.1] mb-6">
               Where Every Pet Feels <br /> Loved & Pampered
             </h1>
@@ -44,9 +45,11 @@ const Hero = () => {
               At Fluffy Moon, we provide top-notch grooming in a safe, fun, and caring environment. Our mission is to make every pet feel relaxed, happy, and looking their best.
             </p>
 
-            <button className="bg-[#F4C430] text-black px-10 py-4 rounded-full font-semibold text-base hover:bg-[#E5B520] transition-all shadow-md hover:shadow-lg">
+            <Link to={"/book-appointment"}>
+              <button className="bg-[#F4C430] text-black px-10 py-4 rounded-full font-semibold text-base hover:bg-[#E5B520] transition-all shadow-md hover:shadow-lg">
               Book a Grooming Session
             </button>
+            </Link>
           </div>
         </div>
 
@@ -88,7 +91,7 @@ const Hero = () => {
 
           {/* DOG PORTRAIT */}
           <div className="absolute bottom-10 right-8 md:right-14 z-30">
-            <div className="w-32 h-40 md:w-40 md:h-48 rounded-2xl overflow-hidden shadow-xl border-[6px] border-[#F4C430] bg-white rotate-[10deg]">
+            <div className="w-32 h-40 md:w-40 md:h-52  rotate-[10deg]">
               <img
                 src={dogPortrait}
                 alt="Dog portrait"

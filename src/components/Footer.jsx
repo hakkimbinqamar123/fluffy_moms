@@ -1,70 +1,80 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
+import footerLogo from "../assets/moon.png";
+import footerbg from '../assets/footerbg.png';
+import { FiPhone, FiMail, FiMapPin, FiInstagram, FiFacebook, FiYoutube } from "react-icons/fi";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#2C5234] text-white">
-      <div className="container mx-auto px-6 py-12">
-        {/* Newsletter Section */}
-        <div className="bg-[#F4C430] rounded-3xl p-8 mb-12 text-center -mt-24 relative z-10">
-          <h3 className="text-2xl font-bold text-black mb-4">
-            Ready to pamper your pet?
-          </h3>
-          <button className="bg-[#2C5234] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#1f3d26] transition">
-            Book an Appointment
-          </button>
-        </div>
+    <footer className="bg-[#5A7E4D] text-white mt-20">
 
-        {/* Footer Content */}
-        <div className="grid md:grid-cols-4 gap-8 mb-8">
-          {/* Company Info */}
+      {/* TOP CTA SECTION WITH IMAGE OVERLAY */}
+      <div className="relative">
+        {/* Background image */}
+        <div
+          className="h-[300px] w-full bg-cover bg-center rounded-b-3xl opacity-90"
+          style={{
+            backgroundImage: `url(${footerbg})`,
+          }}
+        ></div>
+
+
+        {/* CTA centered */}
+        <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
+          <h2 className="text-3xl md:text-4xl font-semibold text-white mb-2">
+            Ready to pamper your pet?
+          </h2>
+          <p className="text-white/80 mb-6">
+            Book your appointment now and give your furry friend the care they deserve!
+          </p>
+          <Link to={"/book-appointment"}>
+            <button className="bg-[#FFC84A] text-black px-8 py-4 rounded-full font-semibold text-lg shadow-md hover:bg-[#f6b833] transition">
+              Book Your Appointment Now
+            </button>
+          </Link>
+        </div>
+      </div>
+
+      {/* MAIN FOOTER */}
+      <div className="container mx-auto px-8 md:px-14 lg:px-20 py-14">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
+
+          {/* LOGO COLUMN */}
           <div className="space-y-4">
-            <div className="flex items-center space-x-3">
-              <div className="w-12 h-12 bg-[#F4C430] rounded-full flex items-center justify-center">
-                <span className="text-2xl">🐾</span>
-              </div>
-              <div>
-                <span className="text-xl font-bold block">FLUFFY MOON</span>
-                <span className="text-xs text-gray-300">Pet Grooming & Care</span>
-              </div>
-            </div>
-            <p className="text-gray-300 text-sm">
-              Providing exceptional pet care and grooming services with love and professionalism.
+            <img src={footerLogo} alt="Fluffy Moon" className="w-24" />
+            <p className="text-sm text-gray-200 max-w-xs leading-relaxed">
+              Shine brighter than the moon
             </p>
           </div>
 
-          {/* Contact Info */}
-          <div>
-            <h4 className="font-semibold mb-4 text-[#F4C430]">Contact Info</h4>
-            <ul className="space-y-3 text-gray-300 text-sm">
-              <li className="flex items-start space-x-2">
-                <span>📞</span>
-                <span>9746243608</span>
-              </li>
-              <li className="flex items-center space-x-2">
-                <span>📧</span>
-                <span>fluffymoonpets@gmail.com</span>
-              </li>
-              <li className="flex items-start space-x-2">
-                <span>📍</span>
-                <span>Kulathoor, Kazhakuttam</span>
-              </li>
-            </ul>
+          {/* CONTACT INFO */}
+          <div className="space-y-4">
+            <h4 className="text-lg font-semibold text-[#F4C430]">Contact Info</h4>
+
+            <p className="flex items-center gap-3 text-gray-200">
+              <FiPhone /> +91 97463 43608
+            </p>
+            <p className="flex items-center gap-3 text-gray-200">
+              <FiMail /> fluffymoonpets@gmail.com
+            </p>
+            <p className="flex items-center gap-3 text-gray-200">
+              <FiMapPin /> Kulathoor, Kazhakuttam
+            </p>
           </div>
 
-          {/* Working Hours */}
-          <div>
-            <h4 className="font-semibold mb-4 text-[#F4C430]">Working Hours</h4>
-            <ul className="space-y-2 text-gray-300 text-sm">
-              <li>Mon-Sun (10 am to 8pm)</li>
-              <li className="text-[#F4C430]">Tue: Closed</li>
-            </ul>
+          {/* WORKING HOURS */}
+          <div className="space-y-4">
+            <h4 className="text-lg font-semibold text-[#F4C430]">Working Hours</h4>
+
+            <p className="text-gray-200">Mon–Sun (10 am to 8pm)</p>
+            <p className="text-[#F4C430]">Tue: Closed</p>
           </div>
 
-          {/* Legal And Policies */}
-          <div>
-            <h4 className="font-semibold mb-4 text-[#F4C430]">Legal And Policies</h4>
-            <ul className="space-y-2 text-gray-300 text-sm">
+          {/* LEGAL + SOCIAL */}
+          <div className="space-y-4">
+            <h4 className="text-lg font-semibold text-[#F4C430]">Legal And Policies</h4>
+
+            <ul className="space-y-2 text-gray-200">
               <li>
                 <Link to="/terms" className="hover:text-[#F4C430] transition">
                   Terms And Condition
@@ -81,25 +91,29 @@ const Footer = () => {
                 </Link>
               </li>
             </ul>
-            
-            <h4 className="font-semibold mt-6 mb-4 text-[#F4C430]">Follow Us</h4>
-            <div className="flex space-x-3">
-              <a href="#" className="w-10 h-10 bg-[#F4C430] rounded-full flex items-center justify-center hover:bg-[#E5B520] transition">
-                <span className="text-[#2C5234] font-bold">f</span>
+
+            <h4 className="text-lg font-semibold text-[#F4C430] mt-6">Follow Us</h4>
+
+            <div className="flex gap-4">
+              <a className="w-10 h-10 bg-[#F4C430] rounded-full flex items-center justify-center hover:bg-[#e7b529] transition">
+                <FiInstagram className="text-black text-lg" />
               </a>
-              <a href="#" className="w-10 h-10 bg-[#F4C430] rounded-full flex items-center justify-center hover:bg-[#E5B520] transition">
-                <span className="text-[#2C5234] font-bold">tw</span>
+              <a className="w-10 h-10 bg-[#F4C430] rounded-full flex items-center justify-center hover:bg-[#e7b529] transition">
+                <FiFacebook className="text-black text-lg" />
               </a>
-              <a href="#" className="w-10 h-10 bg-[#F4C430] rounded-full flex items-center justify-center hover:bg-[#E5B520] transition">
-                <span className="text-[#2C5234] font-bold">ig</span>
+              <a className="w-10 h-10 bg-[#F4C430] rounded-full flex items-center justify-center hover:bg-[#e7b529] transition">
+                <FiYoutube className="text-black text-lg" />
               </a>
             </div>
           </div>
         </div>
 
-        {/* Copyright */}
-        <div className="border-t border-gray-600 pt-6 text-center text-gray-300 text-sm">
-          <p>© 2025 Fluffy Moon. All rights reserved | Powered by Duxloot</p>
+        {/* DIVIDER */}
+        <div className="border-t border-white/30 mt-10 pt-6 flex justify-between text-sm text-gray-200">
+          <p>© 2025 Fluffy Moon. All rights reserved.</p>
+          <p>
+            Powered by <span className="font-semibold text-white">Ducbot</span>
+          </p>
         </div>
       </div>
     </footer>

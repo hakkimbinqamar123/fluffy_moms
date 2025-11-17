@@ -18,6 +18,7 @@ import TermsAndConditions from './components/TermsAndConditions';
 import RefundPolicy from './components/RefundPolicy';
 import PrivacyPolicy from './components/PrivacyPolicy';
 import BookAppointment from './components/BookAppointment';
+import FloatingContactButtons from './components/FloatingContactButtons';
 
 // Scroll to Top Component
 const ScrollToTop = () => {
@@ -55,6 +56,7 @@ function App() {
       <ScrollToTop />
       <div className="min-h-screen">
         <Navbar />
+        <FloatingContactButtons/>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/book-appointment" element={<BookAppointment />} />

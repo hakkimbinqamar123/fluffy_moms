@@ -1,52 +1,55 @@
 import React from 'react';
+import professionalGroomer from '../assets/professional.png';
+import footprint from "../assets/footprint.png"; // Add your footprint icon
 
 const ProfessionalGroomer = () => {
   return (
-    <section className="bg-white py-16">
-      <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row items-center gap-12">
-          <div className="md:w-1/3">
-            <img 
-              src="https://via.placeholder.com/300x300" 
-              alt="Professional Groomer"
-              className="rounded-full w-64 h-64 object-cover mx-auto shadow-2xl border-8 border-primary"
-            />
+    <section className="relative bg-[#FFF7E8] py-20 overflow-hidden">
+
+      <div className="container mx-auto px-6 lg:px-20">
+        <div className="flex flex-col md:flex-row items-center gap-16">
+
+          {/* IMAGE + BADGE */}
+          <div className="relative md:w-1/2 flex justify-center">
+            <div className="rounded-[40px] overflow-hidden border-[6px] border-[#F4C430] shadow-xl w-80 h-80">
+              <img 
+                src={professionalGroomer}
+                alt="Professional Groomer"
+                className="w-full h-full object-cover"
+              />
+            </div>
           </div>
 
-          <div className="md:w-2/3 space-y-6">
-            <div className="flex items-center space-x-3">
-              <span className="text-primary text-2xl">★</span>
-              <h2 className="text-3xl font-bold text-dark">
-                Meet our Professional Groomer
-              </h2>
+          {/* TEXT CONTENT */}
+          <div className="md:w-1/2 space-y-6">
+
+            {/* TITLE */}
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 leading-snug">
+              <span className="text-[#F4C430]">Meet</span> our Professional Groomer
+            </h2>
+
+            {/* TAG */}
+            <div>
+              <span className="inline-block bg-[#F4E39E] px-6 py-2 rounded-full text-gray-800 font-semibold">
+                Expert Groomer
+              </span>
             </div>
 
+            {/* NAME + DESCRIPTION */}
             <div className="space-y-4">
-              <h3 className="text-2xl font-semibold text-dark">About Muhammad</h3>
-              <p className="text-gray-600 leading-relaxed">
-                With over 10 years of experience in pet grooming, Muhammad is a certified 
-                professional who specializes in all breeds. His gentle approach and attention 
-                to detail ensure that every pet receives personalized care tailored to their 
-                specific needs.
-              </p>
-              <p className="text-gray-600 leading-relaxed">
-                Muhammad has trained internationally and holds certifications from leading 
-                grooming academies. He's passionate about creating a stress-free environment 
-                where pets feel comfortable and loved throughout their grooming experience.
+              <h3 className="text-2xl font-bold text-gray-900">Meet Abhirami</h3>
+
+              <p className="text-gray-700 leading-relaxed">
+                Who has 3 years of experience in pet grooming. They’re passionate about providing 
+                top-notch care and making sure your pet looks and feels its best.
               </p>
 
-              <div className="flex flex-wrap gap-4 pt-4">
-                <div className="bg-secondary px-6 py-3 rounded-full">
-                  <span className="font-semibold text-dark">10+ Years Experience</span>
-                </div>
-                <div className="bg-secondary px-6 py-3 rounded-full">
-                  <span className="font-semibold text-dark">Certified Professional</span>
-                </div>
-                <div className="bg-secondary px-6 py-3 rounded-full">
-                  <span className="font-semibold text-dark">All Breeds Specialist</span>
-                </div>
-              </div>
+              <p className="text-gray-700 leading-relaxed">
+                With a gentle touch and a love for animals, Abhirami is dedicated to delivering 
+                exceptional grooming services.
+              </p>
             </div>
+
           </div>
         </div>
       </div>

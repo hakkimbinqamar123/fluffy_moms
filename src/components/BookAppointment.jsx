@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+import emailjs from "emailjs-com";
+import Swal from 'sweetalert2'
+
 
 const BookAppointment = () => {
   const [formData, setFormData] = useState({
@@ -38,10 +41,38 @@ const BookAppointment = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    // Add your form submission logic here
-    alert('Appointment booked successfully!');
+
+    const templateParams = {
+      ...formData,
+      bathDry: formData.services.bathDry ? "Yes" : "No",
+      haircutTrim: formData.services.haircutTrim ? "Yes" : "No",
+      nailTrim: formData.services.nailTrim ? "Yes" : "No",
+      brushOut: formData.services.brushOut ? "Yes" : "No",
+      other: formData.services.other ? "Yes" : "No",
+    };
+
+    emailjs
+      .send(
+        "service_exyfxvn",
+        "template_o5hyfzo",
+        templateParams,
+        "vuI7IiqtLbXgy8Fwd"
+      )
+      .then(
+        (response) => {
+          Swal.fire({
+            title: "Email Sent!",
+            text: "Appointment booked successfully! Email sent.",
+            icon:  response.status,
+          });
+        },
+        (error) => {
+          alert("Failed to send email. Try again later.");
+          console.log("FAILED...", error);
+        }
+      );
   };
+
 
   return (
     <div className="bg-[#F5EFE0] min-h-screen py-16">
@@ -143,7 +174,7 @@ const BookAppointment = () => {
                     <div>
                       <label className="block text-sm text-gray-700 mb-2 flex items-center">
                         <span className="text-green-600 mr-2">📞</span>
-                        Contact Number
+                        +91 9746163608
                       </label>
                       <input
                         type="tel"
@@ -344,7 +375,7 @@ const BookAppointment = () => {
           <div className="text-center mt-10">
             <button
               type="submit"
-              className="bg-[#F4C430] text-black px-16 py-4 rounded-full font-bold text-lg hover:bg-[#E5B520] transition-all shadow-lg hover:shadow-xl"
+              className="bg-[#F4C430] text-white px-16 py-4 rounded-full font-bold text-lg hover:bg-[#E5B520] transition-all shadow-lg hover:shadow-xl"
             >
               Book Session
             </button>

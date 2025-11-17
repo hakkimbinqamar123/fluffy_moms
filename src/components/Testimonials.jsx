@@ -20,13 +20,13 @@ const Testimonials = () => {
     {
       name: "Sapna",
       role: "",
-      text: "This shop has everything I need for my pets at great prices. The staff is always cheerful and ready to help. A wonderful place for all pet parents!",
+      text: "This shop has everything I need for my pets at great prices. The staff is cheerful and always ready to help, making it a wonderful place for parents.",
       image: client2,
     },
     {
       name: "Lekshmi priya",
       role: "",
-      text: "My dog usually gets nervous at grooming salons, but here she walked out smiling and wagging her tail! The groomer was gentle, quick, and did an excellent job with her haircut. She looks amazing. I’ll definitely be back.",
+      text: "My dog gets nervous at salons, but here she left happy. The groomer was quick and did a nice job. She looks truly amazing and we’ll return now.",
       image: client2,
     }
   ];

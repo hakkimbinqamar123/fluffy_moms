@@ -97,7 +97,7 @@ const Footer = () => {
         </div>
 
         {/* DIVIDER */}
-        <div className="border-t border-white/30 mt-10 pt-6 flex flex-col md:flex-row justify-between text-sm text-gray-200 text-center md:text-left">
+        <div className="border-t border-white/30 mt-10 pt-6 flex flex-col md:flex-row justify-center text-sm text-gray-200 text-center md:text-left">
           <p>© 2025 Fluffy Moon. All rights reserved.</p>
           <p>
             Powered by <span className="font-semibold text-white">Ducbot</span>

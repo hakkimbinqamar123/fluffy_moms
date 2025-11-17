@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import footerLogo from "../assets/moon.png";
+import footerLogo from "../assets/moon1.png";
 import footerbg from '../assets/footerbg.png';
 import { FiPhone, FiMail, FiMapPin, FiInstagram, FiFacebook, FiYoutube } from "react-icons/fi";
 
@@ -12,7 +12,7 @@ const Footer = () => {
       <div className="relative">
         {/* Background image */}
         <div
-          className="h-[300px] w-full bg-cover bg-center rounded-b-3xl opacity-90"
+          className="h-[300px] w-full bg-cover bg-center opacity-90"
           style={{
             backgroundImage: `url(${footerbg})`,
           }}
@@ -40,12 +40,15 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
 
           {/* LOGO COLUMN */}
-          <div className="space-y-4">
-            <img src={footerLogo} alt="Fluffy Moon" className="w-24" />
-            <p className="text-sm text-gray-200 max-w-xs leading-relaxed">
-              Shine brighter than the moon
-            </p>
-          </div>
+          <div>
+  <img
+    src={footerLogo}
+    style={{ width: "200px", height: "200px" }}
+    alt="Fluffy Moon"
+    className="block mb-0"
+  />
+</div>
+
 
           {/* CONTACT INFO */}
           <div className="space-y-4">

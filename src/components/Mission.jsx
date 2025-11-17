@@ -6,14 +6,14 @@ const Mission = () => {
   return (
     <section className="relative bg-[#F5EFE0] overflow-hidden py-20 px-8 md:px-14 lg:px-20">
 
-      {/* FOOTPRINT — BOTTOM LEFT (large) */}
+      {/* FOOTPRINT —*/}
       <img
         src={vector}
         alt="footprint"
         className="absolute bottom-10 left-12 w-40  rotate-[-15deg]"
       />
       
-      {/* FOOTPRINT — TOP RIGHT (medium) */}
+      {/* FOOTPRINT —*/}
       <img
         src={vector}
         alt="footprint"

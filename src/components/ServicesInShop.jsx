@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { LuCalendar } from "react-icons/lu";
 import service1 from "../assets/service1.png";
 import service2 from "../assets/service2.png";
@@ -29,6 +29,22 @@ const ServicesInShop = () => {
     },
   ];
 
+  // MOBILE CAROUSEL LOGIC
+  const [index, setIndex] = useState(0);
+  const sliderRef = useRef(null);
+  const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
+
+  // Auto-slide every 3 sec ONLY on mobile
+  useEffect(() => {
+    if (!isMobile) return;
+
+    const interval = setInterval(() => {
+      setIndex((prev) => (prev + 1) % services.length);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, [isMobile]);
+
   return (
     <section className="bg-[#F8F4C8] py-20 px-8 md:px-14 lg:px-20">
       <div className="max-w-7xl mx-auto">
@@ -42,39 +58,69 @@ const ServicesInShop = () => {
           Explore our curated articles designed to help you care for your pets with confidence.
         </p>
 
-        {/* Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-
+        {/* DESKTOP/TABLET GRID (unchanged) */}
+        <div className="hidden md:grid grid-cols-1 md:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <div
               key={index}
               className="bg-[#F4F4A4] rounded-2xl p-4 shadow-sm hover:shadow-lg transition"
             >
-              {/* Image */}
               <img
                 src={service.image}
                 alt={service.title}
                 className="w-full h-56 object-cover rounded-xl mb-5"
               />
 
-              {/* Date */}
               <div className="flex items-center gap-2 text-gray-700 text-sm mb-3">
                 <LuCalendar className="text-xl" />
                 <span>{service.date}</span>
               </div>
 
-              {/* Title */}
               <h3 className="text-xl font-semibold text-black mb-2">
                 {service.title}
               </h3>
 
-              {/* Description */}
               <p className="text-gray-700 text-sm leading-relaxed">
                 {service.description}
               </p>
             </div>
           ))}
+        </div>
 
+        {/* MOBILE CAROUSEL */}
+        <div className="md:hidden overflow-hidden w-full">
+          <div
+            ref={sliderRef}
+            className="flex transition-transform duration-700 ease-in-out"
+            style={{ transform: `translateX(-${index * 100}%)` }}
+          >
+            {services.map((service, i) => (
+              <div key={i} className="w-full flex-shrink-0 px-1">
+                <div className="bg-[#F4F4A4] rounded-2xl p-4 shadow-sm hover:shadow-lg transition">
+
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    className="w-full h-56 object-cover rounded-xl mb-5"
+                  />
+
+                  <div className="flex items-center gap-2 text-gray-700 text-sm mb-3">
+                    <LuCalendar className="text-xl" />
+                    <span>{service.date}</span>
+                  </div>
+
+                  <h3 className="text-xl font-semibold text-black mb-2">
+                    {service.title}
+                  </h3>
+
+                  <p className="text-gray-700 text-sm leading-relaxed">
+                    {service.description}
+                  </p>
+
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
 
       </div>

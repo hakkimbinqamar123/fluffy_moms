@@ -15,7 +15,7 @@ const PetShowGallery = () => {
     <section className="bg-white py-16 px-8 md:px-14 lg:px-20">
   <div className="max-w-7xl mx-auto">
 
-    <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-dark">
+    <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-black">
       Pet Show Participation by Fluffy Moms Pet's
     </h2>
 

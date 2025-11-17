@@ -11,27 +11,34 @@ const FAQ = () => {
     {
       question: "Do I need to make an appointment?",
       answer:
-        "Yes, scheduling an appointment ensures your pet receives dedicated time and attention.",
+        "Yes, appointments are recommended to ensure availability. However, we also accept walk-ins based on our groomers’ schedule.",
     },
     {
       question: "How long does grooming take?",
-      answer:
-        "A full grooming session typically takes between 1.5 to 3 hours depending on your pet’s size and coat condition.",
+      answer: `Grooming time depends on your pet’s size, coat condition, and the services requested. 
+      On average:
+
+      • Small pets: 1–2 hours
+      • Medium pets: 2–3 hours
+      • Large pets or special cases: 3–4 hours
+
+      We’ll give you an estimated pickup time when you drop off your pet.`,
     },
+
     {
       question: "How often should my pet be groomed?",
       answer:
-        "Most pets benefit from grooming every 4–6 weeks, depending on breed and coat type.",
+        "We recommend grooming every 4–6 weeks, depending on your pet’s breed, coat type, and lifestyle.",
     },
     {
       question: "What if I need to cancel or reschedule?",
       answer:
-        "Please inform us at least 24 hours in advance so we can adjust our schedule accordingly.",
+        "Please provide at least 24 hours’ notice to cancel or reschedule your appointment to avoid a cancellation fee.",
     },
     {
       question: "What happens if my pet has a medical emergency during grooming?",
       answer:
-        "Our trained team will act immediately and contact you. If needed, we will seek veterinary assistance.",
+        "In the rare event of a medical issue, we will contact you immediately and, if necessary, take your pet to the nearest veterinary clinic.",
     },
   ];
 

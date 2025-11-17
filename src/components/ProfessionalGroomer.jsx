@@ -11,15 +11,14 @@ const ProfessionalGroomer = () => {
 
           {/* IMAGE + BADGE */}
           <div className="relative md:w-1/2 flex justify-center">
-            <div className="rounded-[40px] overflow-hidden border-[6px] border-[#F4C430] shadow-xl w-80 h-80">
-              <img 
+            <div className="rounded-xl w-80 max-w-full">
+              <img
                 src={professionalGroomer}
                 alt="Professional Groomer"
-                className="w-full h-full object-cover"
+                className="w-full h-auto object-contain rounded-xl"
               />
             </div>
           </div>
-
           {/* TEXT CONTENT */}
           <div className="md:w-1/2 space-y-6">
 
@@ -40,12 +39,12 @@ const ProfessionalGroomer = () => {
               <h3 className="text-2xl font-bold text-gray-900">Meet Abhirami</h3>
 
               <p className="text-gray-700 leading-relaxed">
-                Who has 3 years of experience in pet grooming. They’re passionate about providing 
+                Who has 3 years of experience in pet grooming. They’re passionate about providing
                 top-notch care and making sure your pet looks and feels its best.
               </p>
 
               <p className="text-gray-700 leading-relaxed">
-                With a gentle touch and a love for animals, Abhirami is dedicated to delivering 
+                With a gentle touch and a love for animals, Abhirami is dedicated to delivering
                 exceptional grooming services.
               </p>
             </div>

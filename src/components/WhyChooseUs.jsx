@@ -17,7 +17,16 @@ const WhyChooseUs = () => {
         their best.
       </p>
 
-      {/* MOBILE VIEW */}
+      {/* ⭐ MOBILE IMAGE (under text) */}
+      <div className="mt-10 flex justify-center md:hidden">
+        <img
+          src={dogImage}
+          alt="Dog"
+          className="w-60 h-60 rounded-full shadow-xl border-[6px] border-white object-cover"
+        />
+      </div>
+
+      {/* MOBILE VIEW ICONS */}
       <div className="mt-14 grid grid-cols-2 gap-8 md:hidden">
         {[
           "Experienced and certified groomers",
@@ -34,7 +43,7 @@ const WhyChooseUs = () => {
         ))}
       </div>
 
-      {/* DESKTOP/TABLET VIEW */}
+      {/* DESKTOP VIEW */}
       <div className="relative hidden md:flex justify-center mt-20">
 
         {/* Center Image */}
@@ -43,8 +52,7 @@ const WhyChooseUs = () => {
         </div>
 
         {/* TOP LEFT */}
-        <div className="absolute flex flex-col items-center 
-            -top-10 left-[22%]">
+        <div className="absolute flex flex-col items-center -top-10 left-[22%]">
           <div className="w-14 h-14 bg-white rounded-full shadow-md flex items-center justify-center">
             <FaPaw className="text-[#F4C430] text-2xl" />
           </div>
@@ -54,8 +62,7 @@ const WhyChooseUs = () => {
         </div>
 
         {/* TOP RIGHT */}
-        <div className="absolute flex flex-col items-center 
-            -top-10 right-[22%]">
+        <div className="absolute flex flex-col items-center -top-10 right-[22%]">
           <div className="w-14 h-14 bg-white rounded-full shadow-md flex items-center justify-center">
             <FaPaw className="text-[#F4C430] text-2xl" />
           </div>
@@ -65,8 +72,7 @@ const WhyChooseUs = () => {
         </div>
 
         {/* BOTTOM LEFT */}
-        <div className="absolute flex flex-col items-center 
-            -bottom-10 left-[22%]">
+        <div className="absolute flex flex-col items-center -bottom-10 left-[22%]">
           <div className="w-14 h-14 bg-white rounded-full shadow-md flex items-center justify-center">
             <FaPaw className="text-[#F4C430] text-2xl" />
           </div>
@@ -76,8 +82,7 @@ const WhyChooseUs = () => {
         </div>
 
         {/* BOTTOM RIGHT */}
-        <div className="absolute flex flex-col items-center 
-            -bottom-10 right-[22%]">
+        <div className="absolute flex flex-col items-center -bottom-10 right-[22%]">
           <div className="w-14 h-14 bg-white rounded-full shadow-md flex items-center justify-center">
             <FaPaw className="text-[#F4C430] text-2xl" />
           </div>

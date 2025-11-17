@@ -9,12 +9,19 @@ import { Link } from "react-router-dom";
 const Hero = () => {
   return (
     <section className="relative overflow-visible">
-      <div className="grid lg:grid-cols-2 w-full overflow-visible">
+
+      {/* MOBILE BACKGROUND IMAGE (hidden on md+) */}
+      <div
+        className="absolute inset-0 bg-cover bg-center md:hidden"
+        style={{ backgroundImage: `url(${mainCat})`, opacity: 0.25 }}
+      />
+
+      <div className="grid lg:grid-cols-2 w-full relative z-10 overflow-visible">
 
         {/* LEFT SIDE */}
-        <div className="bg-[#F5EFE0] relative px-10 md:px-16 lg:px-20 py-20 lg:py-28 min-h-[650px] flex items-center overflow-visible">
+        <div className="bg-[#F5EFE0] relative px-8 sm:px-10 md:px-16 lg:px-20 py-16 lg:py-28 min-h-[650px] flex items-center overflow-visible">
 
-          {/* Large Footprint Top Left */}
+          {/* Large Footprint Top Left (only for md+) */}
           <img
             src={footprint}
             className="hidden md:block absolute top-20 left-16"
@@ -26,8 +33,7 @@ const Hero = () => {
           />
 
           {/* TEXT COPY */}
-          <div className="relative z-10 max-w-xl">
-
+          <div className="relative z-20 max-w-xl">
             <h1 className="text-4xl md:text-4xl lg:text-5xl font-bold text-black leading-[1.1] mb-6">
               Where Every Pet Feels <br /> Loved & Pampered
             </h1>
@@ -39,13 +45,13 @@ const Hero = () => {
             </p>
 
             <div className="flex justify-between items-center w-full">
-
               <Link to={"/book-appointment"}>
                 <button className="bg-[#F4C430] text-black px-10 py-4 rounded-full font-semibold text-base hover:bg-[#E5B520] transition-all shadow-md hover:shadow-lg">
                   Book a Grooming Session
                 </button>
               </Link>
 
+              {/* Small footprint (desktop only) */}
               <img
                 src={footprint}
                 className="hidden md:block"
@@ -56,22 +62,22 @@ const Hero = () => {
                 alt="Footprint"
               />
             </div>
-
           </div>
+
         </div>
 
-        {/* RIGHT SIDE */}
-        <div className="relative min-h-[650px] overflow-visible">
+        {/* RIGHT SIDE (hidden on small screens) */}
+        <div className="relative min-h-[650px] overflow-visible hidden md:block">
 
           {/* MAIN CAT */}
           <img
             src={mainCat}
             alt="Cat"
-            className="w-full h-full object-cover !rounded-none !overflow-visible"
+            className="w-full h-full object-cover rounded-none"
           />
 
           {/* TOP OVERLAP IMAGE */}
-          <div className="absolute top-8 left-[-12%] lg:left-[-18%] z-30 hidden md:block">
+          <div className="absolute top-8 left-[-12%] lg:left-[-18%] z-30">
             <div className="w-60 h-44 md:w-72 md:h-52 rounded-2xl overflow-hidden shadow-xl border-4 border-white bg-white">
               <img
                 src={peopleWithPets}
@@ -81,8 +87,8 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* BOTTOM LEFT OVERLAP  */}
-          <div className="absolute bottom-14 left-[-14%] lg:left-[-20%] z-30 hidden md:block">
+          {/* BOTTOM LEFT OVERLAP */}
+          <div className="absolute bottom-14 left-[-14%] lg:left-[-20%] z-30">
             <div className="relative">
               <div className="absolute -bottom-6 -right-6 w-36 h-36 bg-[#E8D5B8] rounded-full -z-10"></div>
 
@@ -97,19 +103,18 @@ const Hero = () => {
           </div>
 
           {/* DOG PORTRAIT */}
-          <div className="hidden md:block absolute bottom-10 right-8 md:right-14 z-30">
+          <div className="absolute bottom-10 right-8 md:right-14 z-30">
             <div className="w-36 h-48 md:w-48 md:h-64 rotate-[6deg]">
               <img
                 src={dogPortrait}
                 alt="Dog portrait"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-fill"
               />
             </div>
           </div>
 
-
-
         </div>
+
       </div>
     </section>
   );

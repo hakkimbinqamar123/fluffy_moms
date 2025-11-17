@@ -63,6 +63,9 @@ function App() {
           <Route path="/terms" element={<TermsAndConditions />} />
           <Route path="/refund-policy" element={<RefundPolicy />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/services" element={<PremiumServices />} />
+          <Route path="/about" element={<ProfessionalGroomer />} />
+          <Route path="/contact" element={<LookingForward />} />
         </Routes>
         <Footer />
       </div>

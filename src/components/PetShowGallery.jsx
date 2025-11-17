@@ -1,11 +1,11 @@
 import React from 'react';
-import show1 from "../assets/show1.png";
+import show1 from "../assets/show1.jpg";
 import show2 from "../assets/show2.png";
 import show3 from "../assets/show3.png";
 import show4 from "../assets/show4.png";
 import show5 from "../assets/show5.png";
 import show6 from "../assets/show6.png";
-import show7 from "../assets/show7.png";
+import show7 from "../assets/show6.png";
 import show8 from "../assets/show8.png";
 
 const PetShowGallery = () => {

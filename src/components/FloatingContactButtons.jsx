@@ -4,11 +4,10 @@ import { FaPhoneAlt, FaWhatsapp, FaComments } from "react-icons/fa";
 const FloatingContactButtons = () => {
   const [showBox, setShowBox] = useState(true);
 
-  // Helper: auto hide box after 5 seconds
   const startAutoHideTimer = () => {
     setTimeout(() => {
       setShowBox(false);
-    }, 5000);
+    }, 3000);
   };
 
   // Run first time when component loads
@@ -16,7 +15,7 @@ const FloatingContactButtons = () => {
     startAutoHideTimer();
   }, []);
 
-  // When showBox becomes true (due to reopening), start auto-hide again
+
   useEffect(() => {
     if (showBox) {
       startAutoHideTimer();

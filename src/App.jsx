@@ -55,7 +55,7 @@ function App() {
     <Router>
       <ScrollToTop />
       <div className="min-h-screen">
-        <Navbar />
+        {/* <Navbar /> */}
         <FloatingContactButtons/>
         <Routes>
           <Route path="/" element={<HomePage />} />

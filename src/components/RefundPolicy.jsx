@@ -4,7 +4,7 @@ const RefundPolicy = () => {
   return (
     <div className="bg-[#F5EFE0] min-h-screen">
       {/* Refund Policy Content */}
-      <div className="container mx-auto px-6 md:px-12 lg:px-20 py-16">
+      <div className="container mx-auto px-6  lg:px-20 py-16">
         <div className="max-w-4xl">
           {/* Main Heading */}
           <h1 className="text-4xl md:text-5xl font-bold text-black mb-12">

@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import client1 from "../assets/client1.png";
+import client2 from "../assets/img1.avif";
 import { RiDoubleQuotesL } from "react-icons/ri";
 
 const Testimonials = () => {
@@ -20,17 +21,16 @@ const Testimonials = () => {
       name: "Sapna",
       role: "",
       text: "This shop has everything I need for my pets at great prices. The staff is always cheerful and ready to help. A wonderful place for all pet parents!",
-      image: client1,
+      image: client2,
     },
     {
       name: "Lekshmi priya",
       role: "",
       text: "My dog usually gets nervous at grooming salons, but here she walked out smiling and wagging her tail! The groomer was gentle, quick, and did an excellent job with her haircut. She looks amazing. I’ll definitely be back.",
-      image: client1,
+      image: client2,
     }
   ];
 
-  // Duplicate list for infinite loop
   const infiniteList = [...testimonials, ...testimonials];
 
   const [index, setIndex] = useState(0);
@@ -44,20 +44,16 @@ const Testimonials = () => {
     return () => clearInterval(interval);
   }, []);
 
-  // Reset index smoothly when halfway reached
   useEffect(() => {
     if (index === testimonials.length) {
-      // Remove transition → instant jump
       sliderRef.current.style.transition = "none";
       setIndex(0);
 
-      // After the jump → re-enable smooth transition
       setTimeout(() => {
         sliderRef.current.style.transition = "transform 0.7s ease-in-out";
       }, 50);
     }
   }, [index]);
-
 
   return (
     <section className="bg-[#FFF7E8] py-20 px-8 md:px-14 lg:px-20 overflow-hidden">
@@ -82,8 +78,11 @@ const Testimonials = () => {
           >
             {infiniteList.map((item, i) => (
               <div key={i} className="w-full flex-shrink-0 px-3">
-                <div className="bg-[#F4F4A4] rounded-3xl p-10 shadow-md relative w-full min-h-[330px] flex flex-col justify-between">
-                  
+                
+                <div className="bg-[#F4F4A4] rounded-3xl p-10 shadow-md relative w-full 
+                     min-h-[500px] sm:min-h-[500px] md:min-h-[330px]
+                     flex flex-col justify-between">
+
                   <RiDoubleQuotesL className="text-[#FF8A00] text-5xl absolute top-6 left-8" />
 
                   <div className="mt-10">
@@ -95,7 +94,6 @@ const Testimonials = () => {
                         className="w-14 h-14 rounded-full object-cover"
                         alt={item.name}
                       />
-
                       <div>
                         <h4 className="font-bold text-lg text-black">{item.name}</h4>
                         <p className="text-sm text-gray-600">{item.role}</p>
@@ -105,6 +103,7 @@ const Testimonials = () => {
                   </div>
 
                 </div>
+
               </div>
             ))}
           </div>

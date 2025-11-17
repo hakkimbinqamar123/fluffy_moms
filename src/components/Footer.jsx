@@ -6,7 +6,7 @@ import { FiPhone, FiMail, FiMapPin, FiInstagram, FiFacebook, FiYoutube } from "r
 
 const Footer = () => {
   return (
-    <footer className="bg-[#5A7E4D] text-white mt-20">
+    <footer className="bg-[#5A7E4D] text-white">
 
       {/* TOP CTA SECTION WITH IMAGE OVERLAY */}
       <div className="relative">

@@ -25,17 +25,6 @@ const Hero = () => {
             alt="Footprint"
           />
 
-          {/* Small Paw — hidden on small screens */}
-          <div className="absolute bottom-18 right-14 opacity-20 hidden md:block">
-            <svg width="65" height="65" viewBox="0 0 60 60" fill="none">
-              <ellipse cx="30" cy="37" rx="12" ry="15" fill="#D4C5A9" />
-              <ellipse cx="20" cy="20" rx="6" ry="8" fill="#D4C5A9" />
-              <ellipse cx="40" cy="20" rx="6" ry="8" fill="#D4C5A9" />
-              <ellipse cx="13" cy="28" rx="5" ry="6" fill="#D4C5A9" />
-              <ellipse cx="47" cy="28" rx="5" ry="6" fill="#D4C5A9" />
-            </svg>
-          </div>
-
           {/* TEXT COPY */}
           <div className="relative z-10 max-w-xl">
 
@@ -78,7 +67,7 @@ const Hero = () => {
           <img
             src={mainCat}
             alt="Cat"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover !rounded-none !overflow-visible"
           />
 
           {/* TOP OVERLAP IMAGE */}
@@ -108,15 +97,16 @@ const Hero = () => {
           </div>
 
           {/* DOG PORTRAIT */}
-          <div className="absolute bottom-10 right-8 md:right-14 z-30 hidden">
+          <div className="hidden md:block absolute bottom-10 right-8 md:right-14 z-30">
             <div className="w-36 h-48 md:w-48 md:h-64 rotate-[6deg]">
               <img
                 src={dogPortrait}
                 alt="Dog portrait"
-                className="w-full h-full object-full"
+                className="w-full h-full object-cover"
               />
             </div>
           </div>
+
 
 
         </div>

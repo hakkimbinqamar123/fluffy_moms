@@ -2,9 +2,8 @@ import React from 'react';
 
 const TermsAndConditions = () => {
   return (
-    <div className="bg-[#F5EFE0] min-h-screen">
-      {/* Terms Content */}
-      <div className="container mx-auto px-6 md:px-12 lg:px-20 py-16">
+    <div className="bg-[#F5EFE0]">
+      <div className="container mx-auto px-6 md:px-12 lg:px-20 pt-16 pb-4">
         <div className="max-w-4xl">
           {/* Main Heading */}
           <h1 className="text-4xl md:text-5xl font-bold text-black mb-12">
@@ -16,11 +15,11 @@ const TermsAndConditions = () => {
             <h2 className="text-2xl font-bold text-black mb-4">General</h2>
             <ul className="space-y-3 text-gray-700 list-disc pl-5">
               <li>
-                These Terms & Conditions govern all purchases, services, and interactions with our Pet Shop 
+                These Terms & Conditions govern all purchases, services, and interactions with our Pet Shop
                 and Grooming Center ("the Company").
               </li>
               <li>
-                By purchasing products, booking services, or visiting our facility, you agree to comply with 
+                By purchasing products, booking services, or visiting our facility, you agree to comply with
                 these terms.
               </li>
             </ul>
@@ -41,11 +40,11 @@ const TermsAndConditions = () => {
             <h2 className="text-2xl font-bold text-black mb-4">Grooming Services</h2>
             <ul className="space-y-3 text-gray-700 list-disc pl-5">
               <li>
-                Customers must disclose all medical or behavioral conditions of their pets (e.g., allergies, 
+                Customers must disclose all medical or behavioral conditions of their pets (e.g., allergies,
                 aggression, anxiety, skin conditions).
               </li>
               <li>
-                The Company reserves the right to refuse grooming services for pets deemed unsafe or unfit 
+                The Company reserves the right to refuse grooming services for pets deemed unsafe or unfit
                 for grooming.
               </li>
               <li>
@@ -57,7 +56,7 @@ const TermsAndConditions = () => {
                 </ol>
               </li>
               <li>
-                Minor nicks, scratches, or stress responses may occur, especially in difficult-to-groom pets. 
+                Minor nicks, scratches, or stress responses may occur, especially in difficult-to-groom pets.
                 The Company is not liable for unavoidable grooming-related incidents.
               </li>
               <li>
@@ -122,7 +121,7 @@ const TermsAndConditions = () => {
           </section>
 
           {/* Payment Terms */}
-          <section className="mb-10">
+          <section className='mb-10'>
             <h2 className="text-2xl font-bold text-black mb-4">Payment Terms</h2>
             <ul className="space-y-3 text-gray-700 list-disc pl-5">
               <li>Full payment is required upon completion of grooming or at the time of purchase.</li>

@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
-    <section className="relative overflow-visible">
+    <section className="relative overflow-visible" id="hero">
 
       {/* MOBILE BACKGROUND IMAGE (hidden on md+) */}
       <div

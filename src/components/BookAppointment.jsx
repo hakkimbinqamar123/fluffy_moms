@@ -63,7 +63,9 @@ const BookAppointment = () => {
           Swal.fire({
             title: "Email Sent!",
             text: "Appointment booked successfully! Email sent.",
-            icon:  response.status,
+            icon: "success",
+          }).then(() => {
+            window.location.reload();  
           });
         },
         (error) => {
@@ -71,6 +73,7 @@ const BookAppointment = () => {
           console.log("FAILED...", error);
         }
       );
+
   };
 
 

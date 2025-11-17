@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React from "react";
 import client1 from "../assets/client1.png";
 import client2 from "../assets/img1.avif";
 import { RiDoubleQuotesL } from "react-icons/ri";
@@ -31,28 +31,7 @@ const Testimonials = () => {
     }
   ];
 
-  const infiniteList = [...testimonials, ...testimonials];
-  const [index, setIndex] = useState(0);
-  const sliderRef = useRef(null);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setIndex((prev) => prev + 1);
-    }, 3000);
-
-    return () => clearInterval(interval);
-  }, []);
-
-  useEffect(() => {
-    if (index === testimonials.length) {
-      sliderRef.current.style.transition = "none";
-      setIndex(0);
-
-      setTimeout(() => {
-        sliderRef.current.style.transition = "transform 0.7s ease-in-out";
-      }, 50);
-    }
-  }, [index]);
+  const infiniteList = [...testimonials, ...testimonials, ...testimonials, ...testimonials];
 
   return (
     <section className="bg-[#FFF7E8] py-20 px-8 md:px-14 lg:px-20 overflow-hidden">
@@ -66,31 +45,40 @@ const Testimonials = () => {
           "Happy pets, Happier Owners."
         </p>
 
-        <div className="w-full flex justify-center overflow-hidden">
+        <div className="relative w-full flex justify-center overflow-hidden">
 
           <div
-            ref={sliderRef}
-            className="flex w-full md:w-1/2 transition-transform duration-700 ease-in-out"
-            style={{ transform: `translateX(-${index * 100}%)` }}
+            className="flex animate-scroll"
+            style={{
+              width: `${infiniteList.length * 30}%`, // tighter scroll width
+            }}
           >
             {infiniteList.map((item, i) => (
-              <div key={i} className="w-full flex-shrink-0 px-3">
-                
-                <div className="bg-[#F4F4A4] rounded-3xl p-10 shadow-md relative w-full 
-                     min-h-[500px] sm:min-h-[500px] md:min-h-[350px]
-                     flex flex-col">
+              <div
+                key={i}
+                className="w-[25%] md:w-[38%] lg:w-[28%] flex-shrink-0 px-2" 
+              >
+                <div className="
+                    bg-[#F4F4A4] rounded-3xl p-8 shadow-md relative 
+                    w-3/4 md:w-full
+                    min-h-[320px] sm:min-h-[330px] md:min-h-[250px]
+                    h-full                            
+                    flex flex-col
+                  "
+                >
 
-                  <RiDoubleQuotesL className="text-[#FF8A00] text-5xl absolute top-6 left-8" />
+                  <RiDoubleQuotesL
+                    className="text-[#FF8A00] text-5xl absolute top-6 left-6"
+                  />
 
-                  {/* Main text */}
-                  <p className="text-gray-700 leading-relaxed mb-6 mt-16">
+                  <p className="text-gray-700 leading-relaxed mb-4 mt-14">
                     {item.text}
                   </p>
 
-                  <div className="flex items-center gap-4 mt-auto">
+                  <div className="flex items-center gap-3 mt-auto">
                     <img
                       src={item.image}
-                      className="w-14 h-14 rounded-full object-cover"
+                      className="w-12 h-12 rounded-full object-cover"
                       alt={item.name}
                     />
                     <div>
@@ -100,7 +88,6 @@ const Testimonials = () => {
                   </div>
 
                 </div>
-
               </div>
             ))}
           </div>
@@ -108,6 +95,20 @@ const Testimonials = () => {
         </div>
 
       </div>
+
+      <style>
+        {`
+          @keyframes slide {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+          }
+
+          .animate-scroll {
+            animation: slide 25s linear infinite;
+          }
+        `}
+      </style>
+
     </section>
   );
 };

@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import footerLogo from "../assets/moon1.png";
+import footerLogo from "../assets/moon.png";
 import footerbg from '../assets/footerbg.png';
 import { FiPhone, FiMail, FiMapPin, FiInstagram, FiFacebook, FiYoutube } from "react-icons/fi";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#5A7E4D] text-white">
+    <footer className="bg-[#5A764E]  text-[#F3DF7C]">
 
       {/* TOP CTA SECTION */}
       <div className="relative">
@@ -49,47 +49,47 @@ const Footer = () => {
 
           {/* CONTACT INFO */}
           <div className="space-y-4">
-            <h4 className="text-lg font-semibold text-[#F4C430]">Contact Info</h4>
+            <h4 className="text-lg font-semibold text-[#F3DF7C]">Contact Info</h4>
 
-            <p className="flex items-center gap-3 text-gray-200">
+            <p className="flex items-center gap-3 text-[#F3DF7C]">
               <FiPhone /> +91 97463 43608
             </p>
-            <p className="flex items-center gap-3 text-gray-200">
+            <p className="flex items-center gap-3 text-[#F3DF7C]">
               <FiMail /> fluffymoonpets@gmail.com
             </p>
-            <p className="flex items-center gap-3 text-gray-200">
+            <p className="flex items-center gap-3 text-[#F3DF7C]">
               <FiMapPin /> Kulathoor, Kazhakuttam
             </p>
           </div>
 
           {/* WORKING HOURS */}
           <div className="space-y-4">
-            <h4 className="text-lg font-semibold text-[#F4C430]">Working Hours</h4>
+            <h4 className="text-lg font-semibold text-[#F3DF7C]">Working Hours</h4>
 
-            <p className="text-gray-200">Mon–Sun (10 am to 8pm)</p>
-            <p className="text-[#F4C430]">Tue: Closed</p>
+            <p className="text-[#F3DF7C]">Mon–Sun (10 am to 8pm)</p>
+            <p className="text-[#F3DF7C]">Tue: Closed</p>
           </div>
 
           {/* LEGAL + SOCIAL */}
           <div className="space-y-4">
-            <h4 className="text-lg font-semibold text-[#F4C430]">Legal And Policies</h4>
+            <h4 className="text-lg font-semibold text-[#F3DF7C]">Legal And Policies</h4>
 
-            <ul className="space-y-2 text-gray-200">
+            <ul className="space-y-2 text-[#F3DF7C]">
               <li><Link to="/terms" className="hover:text-[#F4C430] transition">Terms And Condition</Link></li>
               <li><Link to="/privacy-policy" className="hover:text-[#F4C430] transition">Privacy Policy</Link></li>
               <li><Link to="/refund-policy" className="hover:text-[#F4C430] transition">Refund Policy</Link></li>
             </ul>
 
-            <h4 className="text-lg font-semibold text-[#F4C430] mt-6">Follow Us</h4>
+            <h4 className="text-lg font-semibold text-[#F3DF7C] mt-6">Follow Us</h4>
 
             <div className="flex gap-4">
-              <a className="w-10 h-10 bg-[#F4C430] rounded-full flex items-center justify-center hover:bg-[#e7b529] transition">
+              <a className="w-10 h-10 bg-[#F3DF7C] rounded-full flex items-center justify-center hover:bg-[#e7b529] transition">
                 <FiInstagram className="text-black text-lg" />
               </a>
-              <a className="w-10 h-10 bg-[#F4C430] rounded-full flex items-center justify-center hover:bg-[#e7b529] transition">
+              <a className="w-10 h-10 bg-[#F3DF7C] rounded-full flex items-center justify-center hover:bg-[#e7b529] transition">
                 <FiFacebook className="text-black text-lg" />
               </a>
-              <a className="w-10 h-10 bg-[#F4C430] rounded-full flex items-center justify-center hover:bg-[#e7b529] transition">
+              <a className="w-10 h-10 bg-[#F3DF7C] rounded-full flex items-center justify-center hover:bg-[#e7b529] transition">
                 <FiYoutube className="text-black text-lg" />
               </a>
             </div>
@@ -97,7 +97,7 @@ const Footer = () => {
         </div>
 
         {/* DIVIDER */}
-        <div className="border-t border-white/30 mt-10 pt-6 flex flex-col md:flex-row justify-center text-sm text-gray-200 text-center md:text-left">
+        <div className="border-t border-white/30 mt-10 pt-6 flex flex-col md:flex-row justify-center text-sm text-[#F3DF7C] text-center md:text-left">
           <p>© 2025 Fluffy Moon. All rights reserved.</p>
           <p>
             Powered by <span className="font-semibold text-white">Ducbot</span>

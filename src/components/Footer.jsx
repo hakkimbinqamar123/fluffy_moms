@@ -8,18 +8,13 @@ const Footer = () => {
   return (
     <footer className="bg-[#5A7E4D] text-white">
 
-      {/* TOP CTA SECTION WITH IMAGE OVERLAY */}
+      {/* TOP CTA SECTION */}
       <div className="relative">
-        {/* Background image */}
         <div
           className="h-[300px] w-full bg-cover bg-center opacity-90"
-          style={{
-            backgroundImage: `url(${footerbg})`,
-          }}
+          style={{ backgroundImage: `url(${footerbg})` }}
         ></div>
 
-
-        {/* CTA centered */}
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
           <h2 className="text-3xl md:text-4xl font-semibold text-white mb-2">
             Ready to pamper your pet?
@@ -37,18 +32,20 @@ const Footer = () => {
 
       {/* MAIN FOOTER */}
       <div className="container mx-auto px-8 md:px-14 lg:px-20 py-14">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-5">
 
-          {/* LOGO COLUMN */}
-          <div>
-  <img
-    src={footerLogo}
-    style={{ width: "200px", height: "200px" }}
-    alt="Fluffy Moon"
-    className="block mb-0"
-  />
-</div>
-
+          <div className="space-y-0 flex justify-start md:justify-start">
+            <img
+              src={footerLogo}
+              alt="Fluffy Moon"
+              className="
+                block m-0 p-0
+                w-[120px] h-[120px]
+                sm:w-[150px] sm:h-[150px]
+                md:w-[200px] md:h-[200px]
+              "
+            />
+          </div>
 
           {/* CONTACT INFO */}
           <div className="space-y-4">
@@ -78,21 +75,9 @@ const Footer = () => {
             <h4 className="text-lg font-semibold text-[#F4C430]">Legal And Policies</h4>
 
             <ul className="space-y-2 text-gray-200">
-              <li>
-                <Link to="/terms" className="hover:text-[#F4C430] transition">
-                  Terms And Condition
-                </Link>
-              </li>
-              <li>
-                <Link to="/privacy-policy" className="hover:text-[#F4C430] transition">
-                  Privacy Policy
-                </Link>
-              </li>
-              <li>
-                <Link to="/refund-policy" className="hover:text-[#F4C430] transition">
-                  Refund Policy
-                </Link>
-              </li>
+              <li><Link to="/terms" className="hover:text-[#F4C430] transition">Terms And Condition</Link></li>
+              <li><Link to="/privacy-policy" className="hover:text-[#F4C430] transition">Privacy Policy</Link></li>
+              <li><Link to="/refund-policy" className="hover:text-[#F4C430] transition">Refund Policy</Link></li>
             </ul>
 
             <h4 className="text-lg font-semibold text-[#F4C430] mt-6">Follow Us</h4>
@@ -112,7 +97,7 @@ const Footer = () => {
         </div>
 
         {/* DIVIDER */}
-        <div className="border-t border-white/30 mt-10 pt-6 flex justify-between text-sm text-gray-200">
+        <div className="border-t border-white/30 mt-10 pt-6 flex flex-col md:flex-row justify-between text-sm text-gray-200 text-center md:text-left">
           <p>© 2025 Fluffy Moon. All rights reserved.</p>
           <p>
             Powered by <span className="font-semibold text-white">Ducbot</span>

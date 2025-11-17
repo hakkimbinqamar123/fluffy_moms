@@ -90,10 +90,9 @@ const BookAppointment = () => {
         {/* Form */}
         <form onSubmit={handleSubmit} className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-6">
-            {/* Left Column */}
             <div className="space-y-6">
               {/* Pet Information */}
-              <div className="bg-[#F3E8FF] rounded-3xl p-6">
+              <div className="bg-[#F3E8FF] rounded-3xl p-7">
                 <div className="flex items-center space-x-3 mb-6">
                   <div className="w-10 h-10 bg-[#D8B4FE] rounded-full flex items-center justify-center">
                     <span className="text-purple-700 text-xl">🐾</span>
@@ -150,7 +149,7 @@ const BookAppointment = () => {
               </div>
 
               {/* Owner Information */}
-              <div className="bg-[#E0F7F4] rounded-3xl p-6">
+              <div className="bg-[#E0F7F4] rounded-3xl p-10">
                 <div className="flex items-center space-x-3 mb-6">
                   <div className="w-10 h-10 bg-[#99E6DC] rounded-full flex items-center justify-center">
                     <span className="text-teal-700 text-xl">👤</span>
@@ -204,7 +203,7 @@ const BookAppointment = () => {
               </div>
 
               {/* Appointment Details */}
-              <div className="bg-[#E3F2FD] rounded-3xl p-6">
+              <div className="bg-[#E3F2FD] rounded-3xl p-10">
                 <div className="flex items-center space-x-3 mb-6">
                   <div className="w-10 h-10 bg-[#90CAF9] rounded-full flex items-center justify-center">
                     <span className="text-blue-700 text-xl">📅</span>

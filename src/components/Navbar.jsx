@@ -4,16 +4,15 @@ import logo from "../assets/icon.png";
 
 const Navbar = () => {
   return (
-    <nav className="bg-white shadow-sm sticky top-0 z-50">
+    <nav className="bg-[#5A7E4D] shadow-sm sticky top-0 z-50">
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         <Link to={"/"} className="flex items-center space-x-2">
-          <div className="w-10 h-10 bg-[#F4C430] rounded-full flex items-center justify-center">
-            <img src={logo} className='rounded-full' alt="" />
+          <div className="w-11 h-11 bg-[#F4C430] flex items-center justify-center">
+            <img src={logo} alt="" />
           </div>
-          <span className="text-xl font-bold text-[#2C5234]">Fluffy Moms</span>
         </Link>
         
-        <ul className="hidden md:flex space-x-8 text-gray-700">
+        <ul className="hidden md:flex space-x-8 text-white">
           <li><Link to="/" className="hover:text-[#F4C430] transition">Home</Link></li>
           <li><a href="/services" className="hover:text-[#F4C430] transition">Services</a></li>
           <li><a href="/about" className="hover:text-[#F4C430] transition">About</a></li>

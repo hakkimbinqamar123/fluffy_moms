@@ -8,7 +8,7 @@ const Testimonials = () => {
     {
       name: "Balamurali",
       role: "",
-      text: "I love shopping at this pet store! They always have a great variety of high-quality food, toys, and accessories. The staff is super knowledgeable and helped me choose the perfect food for my dog. Prices are fair and the store is always clean and organized. Highly recommend!",
+      text: "I love shopping here! They offer high-quality food, toys, and accessories. The staff is knowledgeable and helped me choose the right food for my dog. Prices are fair.",
       image: client1,
     },
     {
@@ -32,7 +32,6 @@ const Testimonials = () => {
   ];
 
   const infiniteList = [...testimonials, ...testimonials];
-
   const [index, setIndex] = useState(0);
   const sliderRef = useRef(null);
 
@@ -64,7 +63,7 @@ const Testimonials = () => {
         </h2>
 
         <p className="text-center text-gray-600 mb-14">
-          Your one-stop destination for pet essentials and premium products.
+          "Happy pets, Happier Owners."
         </p>
 
         <div className="w-full flex justify-center overflow-hidden">
@@ -72,34 +71,32 @@ const Testimonials = () => {
           <div
             ref={sliderRef}
             className="flex w-full md:w-1/2 transition-transform duration-700 ease-in-out"
-            style={{
-              transform: `translateX(-${index * 100}%)`,
-            }}
+            style={{ transform: `translateX(-${index * 100}%)` }}
           >
             {infiniteList.map((item, i) => (
               <div key={i} className="w-full flex-shrink-0 px-3">
                 
                 <div className="bg-[#F4F4A4] rounded-3xl p-10 shadow-md relative w-full 
-                     min-h-[500px] sm:min-h-[500px] md:min-h-[330px]
-                     flex flex-col justify-between">
+                     min-h-[500px] sm:min-h-[500px] md:min-h-[350px]
+                     flex flex-col">
 
                   <RiDoubleQuotesL className="text-[#FF8A00] text-5xl absolute top-6 left-8" />
 
-                  <div className="mt-10">
-                    <p className="text-gray-700 leading-relaxed mb-6">{item.text}</p>
+                  {/* Main text */}
+                  <p className="text-gray-700 leading-relaxed mb-6 mt-16">
+                    {item.text}
+                  </p>
 
-                    <div className="flex items-center gap-4">
-                      <img
-                        src={item.image}
-                        className="w-14 h-14 rounded-full object-cover"
-                        alt={item.name}
-                      />
-                      <div>
-                        <h4 className="font-bold text-lg text-black">{item.name}</h4>
-                        <p className="text-sm text-gray-600">{item.role}</p>
-                      </div>
+                  <div className="flex items-center gap-4 mt-auto">
+                    <img
+                      src={item.image}
+                      className="w-14 h-14 rounded-full object-cover"
+                      alt={item.name}
+                    />
+                    <div>
+                      <h4 className="font-bold text-lg text-black">{item.name}</h4>
+                      <p className="text-sm text-gray-600">{item.role}</p>
                     </div>
-
                   </div>
 
                 </div>

@@ -21,7 +21,7 @@ const PremiumServices = () => {
   ];
 
   return (
-    <section className="container mx-auto px-20 py-16">
+    <section className="container mx-auto px-20 py-16" id='services'>
       <h2 className="text-4xl font-bold text-center mb-10 text-gray-800">
         Our Premium Services
       </h2>

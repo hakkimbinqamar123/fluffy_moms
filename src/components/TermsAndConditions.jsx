@@ -132,24 +132,6 @@ const TermsAndConditions = () => {
           </section>
         </div>
       </div>
-
-      {/* CTA Section */}
-      <div className="relative bg-gradient-to-r from-[#6B7D4F] to-[#8A9B6E] py-20">
-        {/* Background pattern/overlay */}
-        <div className="absolute inset-0 bg-black opacity-10"></div>
-        
-        <div className="container mx-auto px-6 text-center relative z-10">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Ready to pamper your pet?
-          </h2>
-          <p className="text-white/90 mb-8 max-w-2xl mx-auto">
-            Book your appointment now and give your furry friend the care they deserve!
-          </p>
-          <button className="bg-[#F4C430] text-black px-10 py-4 rounded-full font-semibold text-base hover:bg-[#E5B520] transition-all shadow-lg hover:shadow-xl">
-            Book Your Appointment Now
-          </button>
-        </div>
-      </div>
     </div>
   );
 };

@@ -1,39 +1,42 @@
 import React from "react";
 import lookingforward1 from "../assets/lookingforward1.png";
 import lookingforward2 from "../assets/lookingforward2.png";
-import { Link } from "react-router-dom";
 
 const LookingForward = () => {
   return (
-    <section className="bg-white py-16 md:py-20 lg:py-24">
-      <div className="container mx-auto px-2 md:px-6 lg:px-12 xl:px-20">
+    <section className="bg-white py-14">
+      <div className="container mx-auto px-4 md:px-8 lg:px-20" id="contact">
 
         {/* Heading */}
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-10 md:mb-14 text-gray-900">
-          We&apos;re Looking Forward to Meeting You!
-        </h2>
-        <p>We can’t wait to connect and learn more about you!</p>
+        <div className="mb-6 md:mb-10">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900">
+            We&apos;re Looking Forward to Meeting You!
+          </h2>
+          <p className="text-gray-600 mt-2">
+            We can’t wait to connect and learn more about you!
+          </p>
+        </div>
 
         {/* Grid Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-12 items-stretch">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-10 items-start">
 
           {/* LEFT IMAGE */}
-          <div className="w-full h-full flex justify-center md:justify-end">
+          <div className="w-full flex justify-center md:justify-start">
             <img
               src={lookingforward1}
               alt="Happy pet parent"
-              className="rounded-3xl shadow-xl w-full max-w-[550px] h-[480px] object-cover"
+              className="rounded-3xl shadow-xl w-full max-w-[550px] h-[460px] object-cover"
             />
           </div>
 
           {/* RIGHT COLUMN */}
-          <div className="flex flex-col gap-8 max-w-[550px] h-[480px]">
+          <div className="flex flex-col gap-6 max-w-[550px]">
 
             {/* SECOND IMAGE */}
             <img
               src={lookingforward2}
               alt="Pet care"
-              className="rounded-3xl shadow-xl w-full h-[250px] object-cover"
+              className="rounded-3xl shadow-xl w-full h-[240px] object-cover"
             />
 
             {/* TITLE */}
@@ -53,19 +56,19 @@ const LookingForward = () => {
               href="https://wa.me/919746243608?text=Hi%20I%20would%20like%20to%20book%20an%20appointment"
               target="_blank"
               rel="noopener noreferrer"
+              className="w-fit"
             >
-              <button className="bg-[#F4C430] text-white px-6 sm:px-8 py-3 rounded-full font-semibold hover:bg-yellow-500 transition flex items-center gap-2 text-sm sm:text-base w-fit">
-                <span>Contact Us</span>
+              <button className="bg-[#F4C430] text-white px-6 sm:px-8 py-3 rounded-full font-semibold hover:bg-yellow-500 transition flex items-center gap-2 text-sm sm:text-base">
+                Contact Us
               </button>
             </a>
-
 
           </div>
 
         </div>
 
       </div>
-    </section >
+    </section>
   );
 };
 

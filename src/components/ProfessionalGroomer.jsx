@@ -4,7 +4,7 @@ import footprint from "../assets/footprint.png"; // Add your footprint icon
 
 const ProfessionalGroomer = () => {
   return (
-    <section className="relative bg-[#FFF7E8] py-20 overflow-hidden">
+    <section className="relative bg-[#FFF7E8] py-20 overflow-hidden" id='about'>
 
       <div className="container mx-auto px-6 lg:px-20">
         <div className="flex flex-col md:flex-row items-center gap-16">

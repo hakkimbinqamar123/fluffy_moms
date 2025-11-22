@@ -4,27 +4,36 @@ import vector from "../assets/foot.png";
 
 const Mission = () => {
   return (
-    <section className="relative bg-[#F5EFE0] overflow-hidden py-20 px-8 md:px-14 lg:px-20">
+    <section className="relative bg-[#FFF7E8] overflow-hidden py-20 px-8 md:px-14 lg:px-20">
 
-      {/* FOOTPRINT —*/}
+      {/* FOOTPRINT */}
       <img
         src={vector}
         alt="footprint"
-        className="absolute bottom-10 left-12 w-40  rotate-[-15deg]"
+        className="absolute bottom-24 left-12 w-40  rotate-[-15deg]"
       />
-      
-      {/* FOOTPRINT —*/}
+
+
+      {/* FOOTPRINT */}
       <img
         src={vector}
         alt="footprint"
-        className="absolute top-10 right-24 w-24 rotate-[-0deg]"
+        className="absolute top-10 right-24 w-24 rotate-[--15deg]"
       />
 
       <div className="container mx-auto px-6 lg:px-20">
         <div className="grid md:grid-cols-2 gap-12 items-center">
 
           {/* LEFT TEXT CONTENT */}
-          <div className="space-y-3 max-w-xl">
+          <div className="space-y-3 max-w-xl relative">
+
+            {/* BOTTOM-RIGHT FOOTPRINT */}
+            <img
+              src={vector}
+              alt="footprint"
+              className="absolute bottom-[-32px] right-[-20px] w-16 opacity-70 rotate-[-15deg]"
+            />
+
             <h2 className="text-4xl font-bold text-gray-900">
               Our Mission
             </h2>
@@ -44,6 +53,8 @@ const Mission = () => {
 
           </div>
 
+
+
           {/* RIGHT IMAGE */}
           <div className="flex justify-center relative">
             <img
@@ -52,6 +63,7 @@ const Mission = () => {
               className="rounded-3xl w-[470px] h-[500px] object-cover shadow-xl"
             />
           </div>
+
 
         </div>
       </div>

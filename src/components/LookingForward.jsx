@@ -48,21 +48,20 @@ const LookingForward = () => {
             <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
               Join hundreds of happy pet parents who trust us with their furry
               family members. Book your appointment today and experience the
-              Fluffy Moms difference!
+              Fluffy Moon difference!
             </p>
 
             {/* BUTTON */}
             <a
-              href="https://wa.me/919746243608?text=Hi%20I%20would%20like%20to%20book%20an%20appointment"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-fit"
+            href="https://wa.me/919746163608?text=Hi%20I%20would%20like%20to%20book%20an%20appointment"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-fit"
             >
-              <button className="bg-[#F4C430] text-white px-6 sm:px-8 py-3 rounded-full font-semibold hover:bg-yellow-500 transition flex items-center gap-2 text-sm sm:text-base">
+            <button className="bg-[#F4C430] text-white px-6 sm:px-8 py-3 rounded-full font-semibold hover:bg-yellow-500 transition flex items-center gap-2 text-sm sm:text-base">
                 Contact Us
-              </button>
+            </button>
             </a>
-
           </div>
 
         </div>

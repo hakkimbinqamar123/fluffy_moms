@@ -13,7 +13,7 @@ const WhyChooseUs = () => {
 
       {/* Heading */}
       <h2 className="text-center text-3xl md:text-4xl font-bold text-gray-800">
-        Why Fluffy Moon ?
+        Why Fluffy Moon?
       </h2>
 
       <p className="text-center max-w-3xl mx-auto mt-3 text-gray-600">

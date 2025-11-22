@@ -2,10 +2,10 @@ import React from "react";
 import { FaPaw, FaUserCheck, FaHandsHelping } from "react-icons/fa";
 import { GiHeartInside, GiBathtub } from "react-icons/gi";
 import dogImage from "../assets/images/hero/dog.png";
-import frame1 from "../assets/frame1.png"
-import frame2 from "../assets/frame2.png"
-import frame3 from "../assets/frame4.png"
-import frame4 from "../assets/frame3.png"
+import frame1 from "../assets/Frame1.png"
+import frame2 from "../assets/Frame2.png"
+import frame3 from "../assets/Frame4.png"
+import frame4 from "../assets/Frame3.png"
 
 const WhyChooseUs = () => {
   return (

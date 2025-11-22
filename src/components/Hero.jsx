@@ -41,7 +41,7 @@ const Hero = () => {
             <h1 className="text-4xl md:text-4xl lg:text-5xl font-bold md:text-black text-white mb-8 [word-spacing:10px]">
               <span>Where Every Pet Feels</span><br />
               <span className="mt-4 inline-block">Loved & Pampered</span>
-            </h1>b
+            </h1>
 
             <p className="text-white md:text-[#4a4a4a] text-base md:text-lg mb-6 leading-[1.3]">
               At Fluffy Moon, we provide top-notch grooming in a safe, fun, and caring
